@@ -41,7 +41,31 @@ const posts = [
 
 export default function Home() {
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div className="bg-white ">
+      <nav className="bg-orange-800 p-4">
+        <div className="container mx-auto">
+          <div className="flex items-center justify-between">
+            <div className="text-white text-xl font-bold">Brewscript</div>
+            <ul className="flex space-x-4">
+              <li>
+                <a href="/" className="text-white hover:text-gray-200">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="about" className="text-white hover:text-gray-200">
+                  about
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="text-white hover:text-gray-200">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
       <div style={fabStyle}>
         {" "}
         <Link href="#vission" passHref>
@@ -54,33 +78,35 @@ export default function Home() {
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Brewscript Roastery
           </h2>
-          <p className="mt-2 text-lg leading-8 text-gray-800">
+          {/* <p className="mt-2 text-lg leading-8 text-gray-800">
             Type of Business
-          </p>
-          ;
+          </p> */}
         </div>
         <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8  border-t border-gray-200 pt-10  lg:mx-0 lg:max-w-none lg:grid-cols-3">
           <article className="flex max-w-xl flex-col items-start justify-between">
             <div className="group relative mt-12">
               <h3 className="mt-3 text-xl font-semibold leading-6 text-gray-900 group-hover:text-gray-800">
-                Business to Business
+                คั่วอ่อน City raost
               </h3>
               <div className="flex items-center gap-x-4 text-xs">
                 <h1 className="text-gray-500"> (B2B)</h1>
               </div>
               <p className="mt-5  text-md leading-6 text-gray-800">
-                ธุรกิจประเภทนี้เน้นการขายสินค้าหรือบริการระหว่างธุรกิจหนึ่งกับอีกธุรกิจหนึ่ง
-                ไม่ว่าจะเป็นการขายวัตถุดิบ อุปกรณ์ หรือบริการเฉพาะทาง เช่น
-                การขายซอฟต์แวร์จัดการคลังสินค้าสำหรับบริษัทขนส่ง
+                การคั่วอ่อนนั้นคือการให้เมล็ดกาแฟผ่านความร้อนไม่มาก
+                เมล็ดกาแฟจะมีสีน้ำตาลอ่อนคล้ายอบเชยและไม่มีน้ำมันออกมามากเท่าไหร่
+                กาแฟคั่วระดับอ่อน ส่วนใหญ่จะมีรสชาติเปรี้ยว กลิ่นหอมผลไม้
+                ไม่เข้มจนเกินไป ทำให้รู้สึกสดชื่นเวลาดื่ม
+                ซึ่งการคั่วอ่อนสามารถทำได้ทั้งกาแฟร้อนและเย็น
+                แต่ถ้าจะทำในรูปแบบเย็นอาจจะต้องปริมาณน้ำตามความเหมาะสมของสายพันธุ์กาแฟ
               </p>
             </div>
           </article>
           <article className="flex max-w-xl flex-col items-start justify-between"></article>
           <article className="flex max-w-xl flex-col items-start justify-between ">
             {" "}
-            <Image
+            <img
               className="absolute inset-0 object-cover shadow-xl mx-auto mt-12"
-              src="/assets/images/business/B2B.png"
+              src="/assets/images/business/light.webp"
               alt=""
               width={600}
               height={400}
@@ -91,24 +117,22 @@ export default function Home() {
           <article className="flex max-w-xl flex-col items-start justify-between">
             <div className="group relative mt-12">
               <h3 className="mt-3 text-xl font-semibold leading-6 text-gray-900 group-hover:text-gray-800">
-                Business to Customer
+                คั่วกลาง full city Roast
               </h3>{" "}
-              <div className="flex items-center gap-x-4 text-xs">
-                <h1 className="text-gray-500"> (B2C)</h1>
-              </div>
               <p className="mt-5  text-md leading-6 text-gray-800">
-                ประเภทนี้คือการที่ธุรกิจขายสินค้าหรือบริการโดยตรงไปยังผู้บริโภค
-                ตัวอย่างเช่น ร้านขายเสื้อผ้า ร้านอาหาร
-                หรือเว็บไซต์การค้าออนไลน์ที่ขายสินค้าหรือบริการให้กับลูกค้าทั่วไป
+                เป็นการคั่วให้เมล็ดกาแฟมีสีที่เข้มขึ้นและทำให้ผิวของกาแฟเป็นมันเล็กน้อย
+                รสชาติของกาแฟที่ได้จะมีความเข้มข้นปานกลางโดยจะให้รสชาติขมอมหวานและเปรี้ยวอยู่เล็กน้อย
+                สามารถนำไปทำได้ทั้งเมนูแบบเย็นและร้อน
+                ซึ่งเป็นระดับการคั่วกาแฟที่ได้รับความนิยมเป็นอย่างมาก
               </p>
             </div>
           </article>
           <article className="flex max-w-xl flex-col items-start justify-between"></article>
           <article className="flex max-w-xl flex-col items-start justify-between ">
             {" "}
-            <Image
+            <img
               className="absolute inset-0 object-cover shadow-xl mx-auto mt-12"
-              src="/assets/images/business/B2C.png"
+              src="/assets/images/business/md.jpg"
               alt=""
               width={600}
               height={400}
@@ -119,87 +143,23 @@ export default function Home() {
           <article className="flex max-w-xl flex-col items-start justify-between">
             <div className="group relative">
               <h3 className="mt-3 text-xl font-semibold leading-6 text-gray-900 group-hover:text-gray-800">
-                Business to Business to Customer
+                คั่วเข้ม vienna roast
               </h3>
-              <div className="flex items-center gap-x-4 text-xs">
-                <h1 className="text-gray-500">(B2B2C)</h1>
-              </div>
+
               <p className="mt-5  text-md leading-6 text-gray-800">
-                ธุรกิจประเภทนี้เป็นการผสมผสานระหว่าง B2B และ B2C
-                ธุรกิจประเภทนี้ทำการขายสินค้าหรือบริการให้กับธุรกิจอื่น ๆ
-                แล้วธุรกิจนั้นจะนำไปขายต่อให้กับผู้บริโภค เช่น
-                การที่บริษัทผลิตสินค้าแล้วขายให้กับตัวแทนจำหน่ายและตัวแทนจำหน่ายนั้นนำสินค้ามาขายต่อให้กับผู้บริโภค
+                การคั่วอ่อนนั้นคือการให้เมล็ดกาแฟผ่านความร้อนไม่มาก
+                เมล็ดกาแฟจะมีสีน้ำตาลอ่อนคล้ายอบเชยและไม่มีน้ำมันออกมามากเท่าไหร่
+                กาแฟคั่วระดับอ่อน ส่วนใหญ่จะมีรสชาติเปรี้ยว กลิ่นหอมผลไม้
+                ไม่เข้มจนเกินไป ทำให้รู้สึกสดชื่นเวลาดื่ม
               </p>
             </div>
           </article>
           <article className="flex max-w-xl flex-col items-start justify-between"></article>
           <article className="flex max-w-xl flex-col items-start justify-between">
             {" "}
-            <Image
+            <img
               className="absolute inset-0 object-cover shadow-xl mx-auto mt-12"
-              src="/assets/images/business/B2B2C.png"
-              alt=""
-              width={600}
-              height={400}
-            />
-          </article>
-        </div>
-        <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8  border-t border-gray-200 pt-10  lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          <article className="flex max-w-xl flex-col items-start justify-between">
-            <div className="group relative">
-              <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-800">
-                <p>
-                  <span className="absolute inset-0" />
-                  Direct to Consumer
-                </p>
-              </h3>{" "}
-              <div className="flex items-center gap-x-4 text-xs">
-                <h1 className="text-gray-500"> (D2C)</h1>
-              </div>
-              <p className="mt-5  text-md leading-6 text-gray-800">
-                ธุรกิจประเภทนี้เป็นการที่ผู้ผลิตสินค้าหรือบริการขายโดยตรงไปยังผู้บริโภคโดยไม่ผ่านตัวแทนจำหน่ายหรือผู้จัดจำหน่าย
-                เช่น แบรนด์รองเท้าที่ขายผ่านเว็บไซต์ของตนเอง
-              </p>
-            </div>
-          </article>
-          <article className="flex max-w-xl flex-col items-start justify-between"></article>
-          <article className="flex max-w-xl flex-col items-start justify-between ">
-            {" "}
-            <Image
-              className="absolute inset-0 object-cover shadow-xl mx-auto mt-12"
-              src="/assets/images/business/D2C.png"
-              alt=""
-              width={600}
-              height={400}
-            />
-          </article>
-        </div>
-        <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8  border-t border-gray-200 pt-10  lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          <article className="flex max-w-xl flex-col items-start justify-between">
-            <div className="group relative">
-              <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-800">
-                <p>
-                  <span className="absolute inset-0" />
-                  Manufacturing to Consumer
-                </p>
-              </h3>{" "}
-              <div className="flex items-center gap-x-4 text-xs">
-                <h1 className="text-gray-500">(M2C)</h1>
-              </div>
-              <p className="mt-5  text-md leading-6 text-gray-800">
-                ประเภทนี้คล้ายกับ D2C
-                แต่เน้นการยืนยันว่าสินค้าได้รับการผลิตและขายโดยตรงจากโรงงานผลิต
-                เป้าหมายของ M2C คือการลดต้นทุน ลดขั้นตอนการจำหน่าย
-                และให้ผู้บริโภคได้รับสินค้าในราคาที่ถูกกว่าและคุณภาพที่ดี
-              </p>
-            </div>
-          </article>
-          <article className="flex max-w-xl flex-col items-start justify-between"></article>
-          <article className="flex max-w-xl flex-col items-start justify-between">
-            {" "}
-            <Image
-              className="absolute inset-0 object-cover shadow-xl mx-auto mt-12"
-              src="/assets/images/business/M2C.png"
+              src="/assets/images/business/dark.jpg"
               alt=""
               width={600}
               height={400}
@@ -216,8 +176,8 @@ export default function Home() {
           <p className="mt-2 text-lg leading-8 text-gray-800">
             Type of Business
           </p>
-          <Link href="#vission" passHref>
-            Vission
+          <Link href="about" passHref>
+            about
           </Link>
           <div>
             <div>
@@ -229,26 +189,27 @@ export default function Home() {
           <article className="flex max-w-xl flex-col col-span-2 items-start justify-between">
             <div className="group relative my-auto">
               <h3 className="mt-3 text-xl font-semibold leading-6 text-gray-900 group-hover:text-gray-800">
-                Business to Business
+                คั่วอ่อน City raost
               </h3>
-              <div className="flex items-center gap-x-4 text-xs">
+              {/* <div className="flex items-center gap-x-4 text-xs">
                 <h1 className="text-gray-500"> (B2B)</h1>
-              </div>
+              </div> */}
               <p className="mt-5  text-md leading-6 text-gray-800">
-                ธุรกิจประเภทนี้เน้นการขายสินค้าหรือบริการระหว่างธุรกิจหนึ่งกับอีกธุรกิจหนึ่ง
-                ไม่ว่าจะเป็นการขายวัตถุดิบ อุปกรณ์ หรือบริการเฉพาะทาง เช่น
-                การขายซอฟต์แวร์จัดการคลังสินค้าสำหรับบริษัทขนส่ง
+                การคั่วอ่อนนั้นคือการให้เมล็ดกาแฟผ่านความร้อนไม่มาก
+                เมล็ดกาแฟจะมีสีน้ำตาลอ่อนคล้ายอบเชยและไม่มีน้ำมันออกมามากเท่าไหร่
+                กาแฟคั่วระดับอ่อน ส่วนใหญ่จะมีรสชาติเปรี้ยว กลิ่นหอมผลไม้
+                ไม่เข้มจนเกินไป ทำให้รู้สึกสดชื่นเวลาดื่ม
               </p>
             </div>
           </article>
           <article className="w-12"></article>
           <article className="flex max-w-xl flex-col col-span-2 items-start justify-between ">
             {" "}
-            <Image
-              className="absolute inset-0 object-cover shadow-xl mx-auto"
-              src="/assets/images/business/B2B.png"
+            <img
+              className="absolute inset-0 object-cover shadow-xl mx-auto mt-12"
+              src="/assets/images/business/light.webp"
               alt=""
-              width={500}
+              width={600}
               height={400}
             />
           </article>
@@ -256,11 +217,11 @@ export default function Home() {
         <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8  border-t border-gray-200 pt-10  sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-5">
           <article className="flex max-w-xl flex-col items-start justify-between col-span-2">
             {" "}
-            <Image
-              className="absolute inset-0 object-cover shadow-xl mx-auto"
-              src="/assets/images/business/B2C.png"
+            <img
+              className="absolute inset-0 object-cover shadow-xl mx-auto mt-12"
+              src="/assets/images/business/md.jpg"
               alt=""
-              width={500}
+              width={600}
               height={400}
             />
           </article>
@@ -268,15 +229,12 @@ export default function Home() {
           <article className="flex max-w-xl flex-col items-start justify-between col-span-2">
             <div className="group relative my-auto">
               <h3 className="mt-3 text-xl font-semibold leading-6 text-gray-900 group-hover:text-gray-800">
-                Business to Customer
+                คั่วกลาง full city Roast
               </h3>{" "}
-              <div className="flex items-center gap-x-4 text-xs">
-                <h1 className="text-gray-500"> (B2C)</h1>
-              </div>
               <p className="mt-5  text-md leading-6 text-gray-800">
-                ประเภทนี้คือการที่ธุรกิจขายสินค้าหรือบริการโดยตรงไปยังผู้บริโภค
-                ตัวอย่างเช่น ร้านขายเสื้อผ้า ร้านอาหาร
-                หรือเว็บไซต์การค้าออนไลน์ที่ขายสินค้าหรือบริการให้กับลูกค้าทั่วไป
+                เป็นการคั่วให้เมล็ดกาแฟมีสีที่เข้มขึ้นและทำให้ผิวของกาแฟเป็นมันเล็กน้อย
+                รสชาติของกาแฟที่ได้จะมีความเข้มข้นปานกลางโดยจะให้รสชาติขมอมหวานและเปรี้ยวอยู่เล็กน้อย
+                สามารถนำไปทำได้ทั้งเมนูแบบเย็นและร้อน
               </p>
             </div>
           </article>
@@ -285,89 +243,28 @@ export default function Home() {
           <article className="flex max-w-xl flex-col items-start justify-between col-span-2">
             <div className="group relative my-auto">
               <h3 className="mt-3 text-xl font-semibold leading-6 text-gray-900 group-hover:text-gray-800">
-                Business to Business to Customer
+                คั่วเข้ม vienna roast
               </h3>
-              <div className="flex items-center gap-x-4 text-xs">
-                <h1 className="text-gray-500">(B2B2C)</h1>
-              </div>
+
               <p className="mt-5  text-md leading-6 text-gray-800">
-                ธุรกิจประเภทนี้เป็นการผสมผสานระหว่าง B2B และ B2C
-                ธุรกิจประเภทนี้ทำการขายสินค้าหรือบริการให้กับธุรกิจอื่น ๆ
-                แล้วธุรกิจนั้นจะนำไปขายต่อให้กับผู้บริโภค เช่น
-                การที่บริษัทผลิตสินค้าแล้วขายให้กับตัวแทนจำหน่ายและตัวแทนจำหน่ายนั้นนำสินค้ามาขายต่อให้กับผู้บริโภค
+                การคั่วเข้มจะใช้เวลาในการคั่วนานที่สุด
+                ทำให้เมล็ดกาแฟมีสีที่เข้มจนเกือบดำและมีน้ำมันกาแฟออกมาเคลือบบนผิวเมล็ดมาก
+                รสชาติเปรี้ยวหวานจะหายไปทั้งหมด กลิ่นจะออกมีติดกลิ่นไหม้เล็กน้อย
+                คาราเมลแบบสโมคๆ บอร์ดี้กาแฟจะหนักแน่น สีกาแฟจะออกมาชัด
+                มีกลิ่นหอมชัดเจน
+                จึงเหมาะคนที่ชอบกาแฟแบบเข้มและเมนูกาแฟที่ผสมนมเพราะจะได้กาแฟคั่วที่มีรสชาติเข้มข้น
+                อร่อย หอมกลิ่นกาแฟแบบเต็มๆ
               </p>
             </div>
           </article>
           <article className="flex max-w-xl flex-col items-start justify-between"></article>
           <article className="flex max-w-xl flex-col items-start justify-between col-span-2">
             {" "}
-            <Image
-              className="absolute inset-0 object-cover shadow-xl mx-auto"
-              src="/assets/images/business/B2B2C.png"
+            <img
+              className="absolute inset-0 object-cover shadow-xl mx-auto mt-12"
+              src="/assets/images/business/dark.jpg"
               alt=""
-              width={500}
-              height={400}
-            />
-          </article>
-        </div>
-        <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8  border-t border-gray-200 pt-10  lg:mx-0 lg:max-w-none lg:grid-cols-5">
-          <article className="flex max-w-xl flex-col items-start justify-between col-span-2">
-            {" "}
-            <Image
-              className="absolute inset-0 object-cover shadow-xl mx-auto"
-              src="/assets/images/business/D2C.png"
-              alt=""
-              width={500}
-              height={400}
-            />
-          </article>{" "}
-          <article className="flex max-w-xl flex-col items-start justify-between"></article>
-          <article className="flex max-w-xl flex-col items-start justify-between col-span-2">
-            <div className="group relative my-auto">
-              <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-800">
-                <p>
-                  <span className="absolute inset-0" />
-                  Direct to Consumer
-                </p>
-              </h3>{" "}
-              <div className="flex items-center gap-x-4 text-xs">
-                <h1 className="text-gray-500"> (D2C)</h1>
-              </div>
-              <p className="mt-5  text-md leading-6 text-gray-800">
-                ธุรกิจประเภทนี้เป็นการที่ผู้ผลิตสินค้าหรือบริการขายโดยตรงไปยังผู้บริโภคโดยไม่ผ่านตัวแทนจำหน่ายหรือผู้จัดจำหน่าย
-                เช่น แบรนด์รองเท้าที่ขายผ่านเว็บไซต์ของตนเอง
-              </p>
-            </div>
-          </article>
-        </div>
-        <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8  border-t border-gray-200 pt-10  lg:mx-0 lg:max-w-none lg:grid-cols-5">
-          <article className="flex max-w-xl flex-col items-start justify-between col-span-2">
-            <div className="group relative my-auto">
-              <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-800">
-                <p>
-                  <span className="absolute inset-0" />
-                  Manufacturing to Consumer
-                </p>
-              </h3>{" "}
-              <div className="flex items-center gap-x-4 text-xs">
-                <h1 className="text-gray-500">(M2C)</h1>
-              </div>
-              <p className="  text-md leading-6 text-gray-800">
-                ประเภทนี้คล้ายกับ D2C
-                แต่เน้นการยืนยันว่าสินค้าได้รับการผลิตและขายโดยตรงจากโรงงานผลิต
-                เป้าหมายของ M2C คือการลดต้นทุน ลดขั้นตอนการจำหน่าย
-                และให้ผู้บริโภคได้รับสินค้าในราคาที่ถูกกว่าและคุณภาพที่ดี
-              </p>
-            </div>
-          </article>
-          <article className="flex max-w-xl flex-col items-start justify-between"></article>
-          <article className="flex max-w-xl flex-col items-start justify-between col-span-2">
-            {" "}
-            <Image
-              className="absolute inset-0 object-cover shadow-xl mx-auto"
-              src="/assets/images/business/M2C.png"
-              alt=""
-              width={500}
+              width={600}
               height={400}
             />
           </article>

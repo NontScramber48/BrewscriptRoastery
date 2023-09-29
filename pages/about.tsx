@@ -1,65 +1,91 @@
 import Link from "next/link";
 import "../styles/globals.css";
+import React from "react";
 
+const products = [
+  {
+    id: 1,
+    name: "ปางขอน 250 G",
+    href: "#",
+    price: "150 THB",
+    description: "คั่วอ่อน",
+    imageSrc: "/assets/images/business/light.webp",
+    imageAlt:
+      "Person using a pen to cross a task off a productivity paper card.",
+  },
+  {
+    id: 2,
+    name: "ปางขอน 250 G",
+    href: "#",
+    price: "150 THB",
+    description: "คั่วกลาง",
+    imageSrc: "/assets/images/business/md.jpg",
+    imageAlt: "Paper card sitting upright in walnut card holder on desk.",
+  },
+  {
+    id: 3,
+    name: "ปางขอน 250 G",
+    href: "#",
+    price: "150 THB",
+    description: "คั่วเข้ม",
+    imageSrc: "/assets/images/business/dark.jpg",
+    imageAlt:
+      "Textured gray felt pouch for paper cards with snap button flap and elastic pen holder loop.",
+  },
+  // More products...
+];
 export default function vission() {
   return (
-    <div className="bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            วิสัยทัศน์
+    <div className="bg-white ">
+      <nav className="bg-orange-800 p-4">
+        <div className="container mx-auto">
+          <div className="flex items-center justify-between">
+            <div className="text-white text-xl font-bold">Brewscript</div>
+            <ul className="flex space-x-4">
+              <li>
+                <a href="/" className="text-white hover:text-gray-200">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="about" className="text-white hover:text-gray-200">
+                  about
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="text-white hover:text-gray-200">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div className="bg-white">
+        <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+          <h2 id="products-heading" className="sr-only">
+            Products
           </h2>
-        </div>{" "}
-        <h2 className="text-xl mt-4 font-bold tracking-tight text-gray-700 sm:text-xl  indent-28">
-          เราเชื่อว่าการจัดการธุรกิจที่มีประสิทธิภาพนั้นเริ่มต้นจากการใช้เทคโนโลยีที่ทันสมัยและเข้าถึงข้อมูลได้รวดเร็ว
-          ผลิตภัณฑ์ซอฟต์แวร์ของเราถูกออกแบบมาเพื่อทำให้ธุรกิจของคุณเข้าถึงข้อมูลอย่างรวดเร็ว
-          วิเคราะห์ข้อมูลได้อย่างลึกซึ้ง
-          สนับสนุนในการทำงานของพนักงานให้ง่ายและมีประสิทธิภาพยิ่งขึ้นผ่านระบบที่เป็นมิตรและมีประสิทธิภาพ
-          และเราเปิดโอกาสให้ผู้บริโภคได้รับสินค้าที่มีคุณภาพ ราคาที่เหมาะสม
-          และสามารถเข้าถึงได้ทั่วโลก
-          พร้อมทั้งส่งเสริมการเติบโตของผู้ผลิตให้เข้าถึงผู้บริโภคอย่างมีประสิทธิภาพ
-          ด้วยเทคโนโลยีที่ทันสมัย
-          และทำให้ธุรกิจทั่วโลกสามารถแข่งขันได้ในยุคดิจิทัล
-        </h2>
-        <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10  lg:mx-0 lg:max-w-none lg:grid-cols-1">
-          <div className="group relative">
-            <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-              <p>
-                <span className="absolute inset-0" />
-                สิ่งที่เรามุ่งเน้นมีดังนี้
-              </p>
-            </h3>
 
-            <p className="mt-5 line-clamp-3 text-xl leading-6 text-gray-900">
-              1.เปิดโอกาสให้ผู้บริโภคได้รับสินค้าที่มีคุณภาพ ราคาเหมาะสม
-              และสามารถเข้าถึงได้ทั่วโลก:
-              เน้นให้ผู้บริโภคสามารถซื้อสินค้าจากทั่วโลกได้โดยง่าย
-              ในราคาที่เหมาะสม และมีคุณภาพ นั่นหมายความว่าโปรแกรม POS
-              ของคุณจะต้องช่วยสนับสนุนการจัดการสินค้า การตั้งราคา
-              และการจัดส่งที่มีประสิทธิภาพ
-            </p>
-            <p className="mt-5 line-clamp-3 text-xl leading-6 text-gray-900">
-              2.ส่งเสริมการเติบโตของผู้ผลิตให้เข้าถึงผู้บริโภคอย่างมีประสิทธิภาพ:
-              ต้องทำให้ผู้ผลิตสามารถเข้าถึงตลาดที่กว้างขวางขึ้น
-              และส่งเสริมการจัดจำหน่ายสินค้าอย่างมีประสิทธิภาพ เช่น
-              การจัดการสต็อก การจัดการการส่งสินค้า และการจัดการการสั่งซื้อ
-            </p>
-            <p className="mt-5 line-clamp-3 text-xl leading-6 text-gray-900">
-              3.ด้วยเทคโนโลยีที่ทันสมัย: ในยุคดิจิทัลนี้
-              เทคโนโลยีทำให้ทุกอย่างเป็นไปได้
-              เราจึงต้องใช้เทคโนโลยีทันสมัยที่มีประสิทธิภาพ เช่น การใช้งาน cloud
-              computing การวิเคราะห์ข้อมูลขนาดใหญ่ และการจัดการฐานข้อมูลแบบ
-              real-time
-            </p>
-            <p className="mt-5 line-clamp-3 text-xl leading-6 text-gray-900">
-              4.ทำให้ธุรกิจทั่วโลกสามารถแข่งขันได้ในยุคดิจิทัล:
-              เราต้องการสร้างผลิตภัณฑ์ที่ช่วยให้ธุรกิจทั่วโลกสามารถแข่งขันในตลาดที่เปลี่ยนแปลงอย่างรวดเร็วนี้
-              นั่นหมายความว่าโปรแกรม POS
-              ของเราต้องสามารถปรับตัวได้ตามการเปลี่ยนแปลงของตลาด
-              ปรับปรุงหรือปรับเปลี่ยนได้ง่าย
-              และต้องทำให้ธุรกิจของลูกค้าของเราสามารถดำเนินการได้อย่างมีประสิทธิภาพและไม่มีปัญหาใด
-              ๆ
-            </p>
+          <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+            {products.map((product) => (
+              <a key={product.id} href={product.href} className="group">
+                <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2">
+                  <img
+                    src={product.imageSrc}
+                    alt={product.imageAlt}
+                    className="h-full w-full object-cover object-center group-hover:opacity-75"
+                  />
+                </div>
+                <div className="mt-4 flex items-center justify-between text-base font-medium text-gray-900">
+                  <h3>{product.name}</h3>
+                  <p>{product.price}</p>
+                </div>
+                <p className="mt-1 text-sm italic text-gray-500">
+                  {product.description}
+                </p>
+              </a>
+            ))}
           </div>
         </div>
       </div>
