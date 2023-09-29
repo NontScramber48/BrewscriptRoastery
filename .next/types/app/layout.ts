@@ -1,4 +1,4 @@
-// File: C:\Users\nont_\OneDrive\Documents\brewscript\src\app\layout.tsx
+// File: /Users/nx77ch/Documents/GitHub/BrewscriptRoastery/src/app/layout.tsx
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
